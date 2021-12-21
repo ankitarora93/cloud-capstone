@@ -54,8 +54,8 @@ functions:
   Auth:
     handler: src/lambda/auth/auth0Authorizer.handler
 
-  GetEnteries:
-    handler: src/lambda/http/getEnteries.handler
+  GetEntries:
+    handler: src/lambda/http/getEntries.handler
     events:
       - http:
           method: get

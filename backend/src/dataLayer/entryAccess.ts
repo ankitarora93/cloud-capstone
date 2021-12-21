@@ -18,7 +18,7 @@ export class EntryAccess {
         private readonly urlExpiration = process.env.SIGNED_URL_EXPIRATION) {
       }
 
-      async getEnteries(getEntryRequest: GetEntryRequest): Promise<EntryItem[]> {
+      async getEntries(getEntryRequest: GetEntryRequest): Promise<EntryItem[]> {
 
         const result = await this.docClient.query({
             TableName: this.entryTable,

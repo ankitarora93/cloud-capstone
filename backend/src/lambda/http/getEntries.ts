@@ -1,12 +1,12 @@
 import { APIGatewayProxyHandler, APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import 'source-map-support/register'
 
-import { getEnteries } from '../../businessLayer/entries'
+import { getEntries } from '../../businessLayer/entries'
 
 export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   console.log('Processing event: ', event)
 
-  const items = await getEnteries(event)
+  const items = await getEntries(event)
 
   return {
     statusCode: 200,

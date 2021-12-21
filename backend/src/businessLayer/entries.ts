@@ -10,14 +10,14 @@ const entryAccess = new EntryAccess()
 const logger = createLogger('entry')
 
 
-export async function getEnteries(event): Promise<EntryItem[]> {
+export async function getEntries(event): Promise<EntryItem[]> {
     logger.info('getEnteriesLog', event)
 
     const getEntryRequest: GetEntryRequest = {
         userId: getUserId(event)
     }
 
-    return entryAccess.getEnteries(getEntryRequest)
+    return entryAccess.getEntries(getEntryRequest)
 } 
 
 export async function createEntry(event): Promise<EntryItem> {
